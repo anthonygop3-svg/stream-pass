@@ -22,7 +22,7 @@ export function CartSection({ cart, total, combo, onRemove, onClear, whatsappNum
   const buildWhatsAppMessage = () => {
     let msg = "¡Hola! Me interesa comprar:\n\n";
     cart.forEach((item) => {
-      msg += `• ${item.name || item.product.name} x${item.quantity} - ${formatCOP(item.product.price * item.quantity)}\n`;
+      msg += `• ${item.product.name} x${item.quantity} - ${formatCOP(item.product.price * item.quantity)}\n`;
     });
     if (combo) {
       msg += `\n🎁 Combo aplicado: ${combo.name} (-${combo.discountPercent}%)\n`;
